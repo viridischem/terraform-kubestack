@@ -45,4 +45,7 @@ module "cluster" {
   auto_upgrade = local.cluster_auto_upgrade
 
   manifest_path = local.manifest_path
+
+  network = local.network
+  subnetwork = local.subnetwork
 }

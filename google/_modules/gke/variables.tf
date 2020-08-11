@@ -108,3 +108,13 @@ variable "manifest_path" {
   type        = string
   description = "Path to Kustomize overlay to build."
 }
+
+variable "network" {
+  type       = string
+  description = "The name of the network to use"
+}
+
+variable "subnetwork" {
+  type       = string
+  description = "The name of the subnetwork to use"
+}

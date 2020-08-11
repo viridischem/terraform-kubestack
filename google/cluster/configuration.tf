@@ -51,6 +51,9 @@ locals {
 
   cluster_auto_upgrade = lookup(local.cfg, "cluster_auto_upgrade", true)
 
+  network = lookup(local.cfg, "network", "")
+  subnetwork = lookup(local.cfg, "subnetwork", "")
+
   manifest_path_default = "manifests/overlays/${terraform.workspace}"
   manifest_path         = var.manifest_path != null ? var.manifest_path : local.manifest_path_default
 }
