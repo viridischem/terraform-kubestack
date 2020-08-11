@@ -26,6 +26,11 @@ resource "google_container_cluster" "current" {
   subnetwork = var.subnetwork
   networking_mode = "VPC_NATIVE"
 
+  ip_allocation_policy {
+    cluster_secondary_range_name = "${var.subnetwork}-pods"
+    services_secondary_range_name = "${var.subnetwork}-services"
+  }
+
   # Enable workload identity
   workload_identity_config {
     identity_namespace = "${var.project}.svc.id.goog"
