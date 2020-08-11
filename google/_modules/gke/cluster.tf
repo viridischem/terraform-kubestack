@@ -23,6 +23,11 @@ resource "google_container_cluster" "current" {
 
   network = google_compute_network.current.self_link
 
+  # Enable workload identity
+  workload_identity_config {
+    identity_namespace = "${var.project}.svc.id.goog"
+  }
+
   #
   #
   # Addon config
