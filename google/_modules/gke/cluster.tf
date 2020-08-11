@@ -1,4 +1,5 @@
 resource "google_container_cluster" "current" {
+  provider = "google-beta"
   project = var.project
   name    = var.metadata_name
 

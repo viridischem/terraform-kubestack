@@ -4,8 +4,8 @@ provider "external" {
 }
 
 # https://github.com/terraform-providers/terraform-provider-google/releases
-provider "google-beta" {
-  version = "~> 3.33.0"
+provider "google" {
+  version = "~> 3.22.0"
 }
 
 # https://github.com/terraform-providers/terraform-provider-kubernetes/releases

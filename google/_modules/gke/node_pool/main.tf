@@ -1,4 +1,5 @@
 resource "google_container_node_pool" "current" {
+  provider = "google-beta"
   name     = var.pool_name
   project  = var.project
   cluster  = var.metadata_name
