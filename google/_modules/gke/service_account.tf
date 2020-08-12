@@ -15,3 +15,9 @@ resource "google_project_iam_member" "metric_writer" {
   member  = "serviceAccount:${google_service_account.current.email}"
 }
 
+resource "google_project_iam_member" "storage_viewer" {
+  project = var.project
+  role    = "roles/storage.objectViewer"
+  member  = "serviceAccount:${google_service_account.current.email}"
+}
+
