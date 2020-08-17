@@ -8,3 +8,9 @@ variable "manifest_path" {
   description = "Path to Kustomize overlay to build."
   default     = null
 }
+
+variable "resource_labels" {
+  description = "Set of labels to be applied to the cluster"
+  type        = map
+  default     = {}
+}

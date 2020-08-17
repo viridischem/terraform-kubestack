@@ -118,3 +118,9 @@ variable "subnetwork" {
   type       = string
   description = "The name of the subnetwork to use"
 }
+
+variable "resource_labels" {
+  description = "Set of labels to be applied to the cluster"
+  type        = map
+  default     = {}
+}

@@ -31,6 +31,8 @@ resource "google_container_cluster" "current" {
     services_secondary_range_name = "${var.subnetwork}-services"
   }
 
+  resource_labels = var.resource_labels
+
   # Enable workload identity
   workload_identity_config {
     identity_namespace = "${var.project}.svc.id.goog"

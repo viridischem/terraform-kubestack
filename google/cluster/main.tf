@@ -17,6 +17,7 @@ module "cluster" {
   metadata_fqdn   = module.cluster_metadata.fqdn
   metadata_tags   = module.cluster_metadata.tags
   metadata_labels = module.cluster_metadata.labels
+  resource_labels = var.resource_labels
 
   location       = local.region
   node_locations = local.cluster_node_locations
